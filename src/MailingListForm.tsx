@@ -2,6 +2,8 @@ import "formsmd/dist/css/formsmd.min.css";
 import { useEffect, useRef } from "react";
 import { Composer, Formsmd } from "formsmd";
 
+
+
 const composer = new Composer({
   id: "mailing-list-form",
   postUrl: "/api/mailing-list",
@@ -37,14 +39,14 @@ composer.slide({
 composer.textInput("fullName", {
   question: "Qual é o seu nome completo?",
   required: true,
-  placeholder: "Digite seu nome completo" ,
+  placeholder: "Nome Completo" ,
   
  
 });
 
 // Nova etapa - Slide 2 (progresso: 50%)
 composer.slide({
-  pageProgress: "35%"
+  pageProgress: "17%"
 });
 
 composer.emailInput("email", {
@@ -55,7 +57,7 @@ composer.emailInput("email", {
 
 // Nova etapa - Slide 3 (progresso: 75%)
 composer.slide({
-  pageProgress: "45%"
+  pageProgress: "25%"
 });
 
 //etapa 4 
@@ -69,12 +71,25 @@ composer.telInput('phone', {
 
 
 composer.slide({
-  pageProgress: '60%'
+  pageProgress: '35%'
 
 })
 
-composer.textInput( 'situatiuon',   {
-  question: 'qual sua sutiacão atual ?',
+composer.textInput('instagram', {
+  question: 'qual seu instagram ?',
+  required: true,
+  placeholder: 'digite aqui ... ',
+
+})
+
+composer.slide({
+  pageProgress: '45%'
+})
+
+
+
+composer.textInput( 'situation',   {
+  question: 'qual sua situação atual ?',
   required: true,
   placeholder: 'digite aqui ... ',
   
@@ -82,8 +97,19 @@ composer.textInput( 'situatiuon',   {
 })
 
 composer.slide({
-  pageProgress: '65%'
+  pageProgress: '60%'
 })
+
+composer.textInput('trabalho', {
+  question: 'Você está trabalhando atualmente?',
+  required: true,
+  placeholder: 'digite aqui ... '
+})
+composer.slide({
+  pageProgress: '75%'
+})
+
+
 
 composer.choiceInput("interesse", {
   question: "Qual área te interessa mais?",
@@ -94,19 +120,60 @@ composer.choiceInput("interesse", {
     { label: "Marketing", value: "marketing" },
     { label: "Outro", value: "outro" }
   ],
-  required: true
+  required: true,
+  
 });
 
 // Nova etapa - Slide 4 (progresso: 100%)
 composer.slide({
-  pageProgress: "100%"
+  pageProgress: "80%"
 });
 
-composer.textInput("message", {
-  question: "Conte-nos um pouco sobre você (opcional)",
-  multiline: true,
-  placeholder: "Digite sua mensagem aqui..."
+
+
+composer.choiceInput("renda", {
+  question: "Qual sua renda mensal?",
+  choices: [
+    { label: "Até R$ 1.000", value: "ate_1000" },
+    { label: "R$ 1.000 a R$ 3.000", value: "1k_3k" },
+    { label: "R$ 3.000 a R$ 5.000", value: "3k_5k" },
+    { label: "Acima de R$ 5.000", value: "acima_5k" }
+  ],
+  required: true
 });
+
+composer.slide({
+  pageProgress: "90%"
+})
+
+composer.textInput("porque", {
+  question: "Porque eu deveria te escolher para participar da nossa Call Estratégica?",
+  required: true,
+  placeholder: "Responda aqui..."
+});
+
+composer.slide({
+  pageProgress: "95%"
+})
+
+
+composer.choiceInput("comparecimento", {
+  question: "Caso seja escolhido(a), Certeza que ira copmparecer na call ? ",
+  choices: [
+    { label: "Sim" },
+    { label: "Não" }
+
+  ]
+})
+
+composer.slide({
+  pageProgress: "100%"
+})
+
+composer.h1('Obrigado por Preencher em breve entro em contato !',{
+  classNames: ['text-center']
+})
+
 
 export default function MailingListForm() {
   const containerRef = useRef<HTMLDivElement | null>(null);
