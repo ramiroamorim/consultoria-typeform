@@ -1,24 +1,10 @@
+import './App.css';
 import MailingListForm from './MailingListForm';
-
 
 function App() {
   return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}>
-      
-      
-      <div style={{
-        width: '100%',
-        maxWidth: '1000px',
-        height: '100vh',
-        backgroundColor: 'white',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
+    <div className="page">
+      <div className="container">
         <MailingListForm />
       </div>
     </div>
