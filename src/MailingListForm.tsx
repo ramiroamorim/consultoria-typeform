@@ -19,7 +19,7 @@ composer.startSlide({
   buttonText: 'Vamos la'
 })
 
-composer.h1('Seja muito bem vindo(a) ao plano Global', {
+composer.h1('Seja muito bem vindo(a) ao Plano Global', {
   classNames: ['text-center']
 })
 
@@ -28,7 +28,7 @@ composer.p('Aqui voce irá aprender como vender infoprodutos a nivel global para
 })
 
 composer.slide({
-  pageProgress: '25%'
+  pageProgress: '5%'
 })
 
 
@@ -46,7 +46,7 @@ composer.textInput("fullName", {
 
 // Nova etapa - Slide 2 (progresso: 50%)
 composer.slide({
-  pageProgress: "17%"
+  pageProgress: "12%"
 });
 
 composer.emailInput("email", {
@@ -57,7 +57,7 @@ composer.emailInput("email", {
 
 // Nova etapa - Slide 3 (progresso: 75%)
 composer.slide({
-  pageProgress: "25%"
+  pageProgress: "17%"
 });
 
 //etapa 4 
@@ -66,12 +66,13 @@ composer.slide({
 composer.telInput('phone', {
   question: 'Qual o seu celular ?',
   country: 'BR',
+
   placeholder:" (55)...."
 });
 
 
 composer.slide({
-  pageProgress: '35%'
+  pageProgress: '22%'
 
 })
 
@@ -83,7 +84,7 @@ composer.textInput('instagram', {
 })
 
 composer.slide({
-  pageProgress: '45%'
+  pageProgress: '33%'
 })
 
 
@@ -97,7 +98,7 @@ composer.textInput( 'situation',   {
 })
 
 composer.slide({
-  pageProgress: '60%'
+  pageProgress: '40%'
 })
 
 composer.textInput('trabalho', {
@@ -106,7 +107,7 @@ composer.textInput('trabalho', {
   placeholder: 'digite aqui ... '
 })
 composer.slide({
-  pageProgress: '75%'
+  pageProgress: '55%'
 })
 
 

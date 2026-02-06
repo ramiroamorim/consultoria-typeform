@@ -12,7 +12,7 @@ function App() {
       
       <div style={{
         width: '100%',
-        maxWidth: '800px',
+        maxWidth: '1000px',
         height: '100vh',
         backgroundColor: 'white',
         display: 'flex',
